@@ -1,0 +1,494 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu_text {
+  font-size: 20px;
+  line-height: 29px;
+  font-weight: 500;
+  color: #21243D;
+}
+
+.caption {
+  font-size: 44px;
+  line-height: 60px;
+  font-weight: 700;
+  color: #21243D;
+}
+
+.sub_caption {
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+  color: #21243D;
+}
+
+.text18 {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #21243D;
+}
+
+.text16 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #21243D;
+}
+
+.caption_box {
+  font-size: 22px;
+  line-height: 45px;
+  font-weight: 400;
+  color: #21243D;
+}
+
+.mainCaption {
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: 700;
+  color: black;
+}
+
+.caption {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-weight: 700;
+  color: black;
+}
+
+.subCaption {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  font-weight: 700;
+  color: #000000;
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+  font-weight: 500;
+  color: #000000;
+}
+
+.button {
+  padding: 10px 30px;
+  background-color: #8FBC8F;
+  color: white;
+  border-radius: 3px;
+  border: 2px solid #8FBC8F;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.button:hover {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: #207248;
+  border-radius: 3px;
+  border: 2px solid #207248;
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button-empty {
+  padding: 10px 16px;
+  background-color: transparent;
+  color: black;
+  border-radius: 12px;
+  border: 2px solid #8FBC8F;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.button-empty:hover {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  padding: 10px 16px;
+  background-color: black;
+  color: white;
+  border-radius: 12px;
+  border: 2px solid black;
+  outline: none;
+}
+
+.button-empty:focus {
+  outline: none;
+}
+
+.container {
+  max-width: 930px;
+  padding: 0 15px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  font-weight: 500;
+  font-family: "Heebo";
+  font-size: 10px;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #331e1e;
+}
+
+body::-webkit-scrollbar-track {
+  background: #a6d2a6;
+}
+
+body {
+  scrollbar-face-color: #331e1e;
+  scrollbar-track-color: #a6d2a6;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0px;
+          flex: 1 1 0;
+}
+
+.header {
+  background-color: #a0c0a8;;
+  position: absolute;
+  width: 100%;
+}
+
+.menu {
+  margin: 2rem 0;
+}
+
+.menu .menu__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  list-style: none;
+}
+
+.menu .menu__inner .menu__items a {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.menu .menu__inner .menu__items a:hover {
+  color: #207248;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.footer {
+  margin: 2rem 0;
+}
+
+.footer .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.footer .social li {
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.footer .social li:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.footer .social li a img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.main {
+  padding: 10rem 0 6rem 0;
+}
+
+.main .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.main .main-name {
+  gap: 2rem;
+}
+
+.main .main-name .caption {
+  max-width: 26rem;
+  margin: 5rem 0;
+}
+
+.main .main-name .caption span {
+  color: #207248;
+}
+
+.main .main-name .button {
+  margin: 1rem 0;
+}
+
+.main .my_photo {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+}
+
+.about {
+  background-color: #a0c0a8;;
+  padding: 2rem 0;
+}
+
+.about .container p {
+  margin: 1rem 0;
+}
+
+.about .container p a {
+  color: #207248;
+}
+
+.skills {
+  padding: 2rem 0;
+}
+
+.skills .skills-item {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+.works {
+  padding: 2rem 0;
+  background-color: #a0c0a8;
+}
+
+.works .stores .clothings {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 2rem 0;
+  gap: 2rem;
+}
+
+.works .stores .clothings .web-img img {
+  width: 246px;
+  height: 180px;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.works .stores .clothings .web-img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+}
+
+.works .stores .clothings .description .description-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works .stores .clothings .description .description-name .year {
+  background-color: #21243D;
+  color: white;
+  font-size: 18px;
+  line-height: 26px;
+  border-radius: 10px;
+  padding: 2px 10px;
+}
+
+.works .stores .clothings .description .description-name .text18 {
+  color: rgb(37, 62, 5);
+}
+
+.string {
+  border: 2px solid;
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu .menu__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .main-name {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main .my_photo {
+    margin: 0 auto;
+  }
+  .main .main-name .caption {
+    margin: 2rem 0;
+  }
+  .works .stores .clothings .web-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .menu .menu__inner {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .main-name {
+    text-align: center;
+    margin: 0 auto;
+  }
+  .main .my_photo {
+    margin: 0 auto;
+  }
+  .main .main-name .caption {
+    margin: 2rem 0;
+  }
+  .works .stores .clothings .web-img img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .works .stores .clothings .web-img img {
+    width: 246px;
+    height: 180px;
+  }
+  .menu .menu__inner {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  .main .main-name {
+    text-align: start;
+    margin: 0;
+  }
+  .main .my_photo {
+    margin: 0;
+  }
+  .main .main-name .caption {
+    margin: 5rem 0;
+  }
+}

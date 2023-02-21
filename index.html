@@ -1,123 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Space+Mono:ital@1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>iphone 14 pro</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <title>Iryna CV</title>
+    </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <nav class="nav">
-                <button class="menu-btn" type="button">
-                <span class="btn-line"></span>
-                <span class="btn-line"></span>
-                <span class="btn-line"></span>
-                <span class="btn-line"></span>
-                </button>
-                <ul class="menu">
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Що нового</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Колір</a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="#" class="menu-link">Замовити</a>
-                    </li>
-                </ul>
-                <a class="logo">
-                    <img src="images/logo.svg" alt="логотип сайту" class="logo-img">
-                </a>
-                
-                <a href="tel:380504565656" class="phone">+38 050-456-56-56</a>
-            </nav>
-        </div>
-    </header>
-    <main class="main">
-        <section class="headline">
-            <div class="container"><h1 class="title">IPHONE 14 PRO</h1>
-            <img class="headline-img" src="images/iphone.png" alt="IPHONE 14 PRO">
-            <a class="headline-btn" href="#">ВИБРАТИ</a>
-        </div>   
-        </section>
-        <section class="new">
-        <div class="container">
-            <h2 class="new-title">ЩО НОВОГО</h2>
-            <div class="new-info">
-                <div class="new-text">
-                    <p>Всі моделі оснащені однокристальною системою A16 Bionic, 48-мегапіксельною основною камерою та екранами ProMotion із захистом Ceramic Shield та частотним діапазоном 1 – 120 Гц, а також прискореною пам'яттю LPDDR5. Дизайн лінійки оновлено, на фронтальній панелі смартфонів два вирізи.
-                    </p>
-                    <p>Всі iPhone 14 в США будуть продаватися без лотка для SIM-карток: виробник заявляє, що покращена технологія eSIM дозволить перенести старі електронні сім-картки на нові смартфони.
-                    </p>
-                    <p>Оновлено фронтальну камеру (вона оснащена автофокусом і швидше розпізнає користувача в умовах недостатнього освітлення) та сенсор основної камери.
-                    </p>
-                    <b>iPhone 14 Pro вийшов у новому дизайні — без фірмової чубчика. Також у асортименті з'явився новий колір. У смартфоні, на відміну від «звичайних» 14-х айфонів, встановлений процесор A16 Bionic, який може за секунду робити 4 трлн операцій із фото.
-                    </b>
-                </div>
-                <img class="images-new" src="images/iPhone-news.jpg" alt="iPhone-news">
-            </div>
-        </div>
-        </section>
-        <section class="color">
+
+    <div class="wrapper">
+
+        <!-- header -->
+        <header class="header">
+           <div class="container">
+               <nav class="menu">
+                   <ul class="menu__inner">
+                       <li class="menu__items">
+                           <a href="#about" class="menu_text">About</a>
+                       </li>
+        
+                       <li class="menu__items">
+                           <a href="#skills" class="menu_text">Skills</a>
+                       </li>
+        
+                       <li class="menu__items">
+                           <a href="#projects" class="menu_text">Projects</a>
+                       </li>
+        
+                       <li class="menu__items">
+                           <a href="#social" class="menu_text">Social</a>
+                       </li>
+                   </ul>
+               </nav>
+           </div>
+        </header>
+
+        <!-- Main Scrin  -->
+        <section class="main">
             <div class="container">
-                <h2 class="color-title">ОБЕРІТЬ СВІЙ КОЛІР</h2>
-                <ul class="color-list">
-                    <li class="color-item">
-                        <img src="images/color-1.jpg" alt="">
-                        <h3>Silver</h3>
-                        <p>Сріблястий</p>
+                <div class="main-name">
+                    <h2 class="caption">Hi, I am Iryna, <span>Junior</span> Frontend Developer</h2>
+                    
+                    <!-- button  -->
+                    <a href="resume/Petruk_CVFE.docx" download="">
+                        <button class="button">Download Resume</button> 
+                    </a>
+                </div>
+
+                <img class="my_photo" src="img/me.jpeg" alt="i am">             
+            </div>
+        </section>
+
+        <!-- About  -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="sub_caption">About</h2>
+                <p class="caption_box">attentive - executive - easily trained</p>
+                <p class="text18">Self-educated of layout, currently learning Java Script. I like to create websites, I`m looking forward to connect my life with the profession of Front-end developer.</p>
+                <p class="text18">I am ready to start working as a Junior Frontend Developer, my projects completed during my studies can be viewed below in the <a href="#projects">Projects section</a>.</p>
+            </div>
+        </section>
+
+        <!-- Skills  -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="sub_caption">Skills</h2>
+                <ul class="skills-item">
+                    <li>
+                        <p class="caption_box">Java Script (basic)</p>
                     </li>
-                    <li class="color-item">
-                        <img src="images/color-2.jpg" alt="">
-                        <h3>Deep purple</h3>
-                        <p>Темно фіолетовий</p>
+                    <li>
+                        <p class="caption_box">HTML5</p>
                     </li>
-                    <li class="color-item">
-                        <img src="images/color-3.jpg" alt="">
-                        <h3>Gold</h3>
-                        <p>Золотий</p>
+                    <li>
+                        <p class="caption_box">CSS</p>
                     </li>
-                    <li class="color-item">
-                        <img src="images/color-4.jpg" alt="">
-                        <h3>Space Black</h3>
-                        <p>Космічний чорний</p>
+                    <li>
+                        <p class="caption_box">SQL</p>
+                    </li>
+                    <li>
+                        <p class="caption_box">Git</p>
                     </li>
                 </ul>
             </div>
         </section>
-        <section class="contacts">
+
+        <!-- Projects -->
+        <section id="projects" class="works">
             <div class="container">
-                <div class="contacts-inner">
-                    <form class="contacts-form" action="#">
-                        <h2 class="contacts-title">ХОЧЕШ IPHONE 14 PRO?</h2>
-                        <input class="contacts-input" type="text" placeholder="name">
-                        <input class="contacts-input" type="tel" placeholder="tel">
-                        <p>Наш менеджер зв'яжеться з Вами</p>
-                        <button type="submit">ЗАМОВИТИ</button>
-                    </form>
-                    <img class="contacts-img" src="images/contact.jpg" alt="iphone">
+                <h2 class="sub_caption">My Pet Projects</h2>
+                <div class="stores">
+                    <div class="clothings">
+                        <a class="web-img" href="https://irynapetruk.github.io/lamb/">
+                            <img src="img/lamb.png" alt="store-img">
+                        </a>
+                        <div class="description">
+                            <h2 class="sub_caption">Info Page</h2>
+                            <div class="description-name">
+                                <p class="year">2022</p>
+                                <p class="text18">Website</p>
+                            </div>
+                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
+                        </div>
+                    </div>
+
+                    <div class="string"></div>
+
+                    <div class="clothings">
+                        <a class="web-img" href="https://irynapetruk.github.io/sup/">
+                            <img src="img/sup.png" alt="store-img">
+                        </a>
+                        <div class="description">
+                            <h2 class="sub_caption">Sup Store</h2>
+                            <div class="description-name">
+                                <p class="year">2022</p>
+                                <p class="text18">Internet shop</p>
+                            </div>
+                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
+                        </div>
+                    </div>
+
+                    <div class="string"></div>
+
+                    <div class="clothings">
+                        <a class="web-img" href="https://irynapetruk.github.io/xiaomi/">
+                            <img src="img/xiaomi.png" alt="store-img">
+                        </a>
+                        <div class="description">
+                            <h2 class="sub_caption">Bike Store</h2>
+                            <div class="description-name">
+                                <p class="year">2022</p>
+                                <p class="text18">Internet shop</p>
+                            </div>
+                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
+                        </div>
+                    </div>
+
+                    <div class="string"></div>
+
+                    <div class="clothings">
+                        <a class="web-img" href="https://irynapetruk.github.io/real/">
+                            <img src="img/real.png" alt="store-img">
+                        </a>
+                        <div class="description">
+                            <h2 class="sub_caption">Info Page</h2>
+                            <div class="description-name">
+                                <p class="year">2022</p>
+                                <p class="text18">Website</p>
+                            </div>
+                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-inner">
-                <a class="footer-link" href="#">Політика конфіденційності</a>
-                <a class="logo">
-                    <img src="images/logo.svg" alt="логотип сайту" class="logo-img">
-                </a>
-                <a href="tel:380504565656" class="phone">+38 050-456-56-56</a>
-            </div>
-        </div>
-    </footer>
+
+        <!-- footer  -->
+        <footer id="social" class="footer">
+           <div class="container">
+                <ul class="social">
+                    <li>
+                        <a href="mailto:blog.irynka@gmail.com">
+                            <img src="img/gmail.png" alt="mail">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://telegram.me/iryna_petruk">
+                            <img src="img/telegram.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+           </div>
+        </footer>
+    
+    </div>
+
     <script src="js/main.js"></script>
+
 </body>
 </html>
