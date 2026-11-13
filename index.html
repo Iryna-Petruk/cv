@@ -46,17 +46,17 @@ section{padding:56px 0;border-top:1px solid var(--line)}
 h2{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:32px}
 
 /* project cards */
-.project{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px;display:grid;grid-template-columns:1.1fr 1fr}
+.project{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
 .project .shot{display:block;background:#F1F1EE;border-right:1px solid var(--line);overflow:hidden}
 .project .shot img{width:100%;height:100%;min-height:320px;object-fit:cover;object-position:left top;display:block;transition:transform .4s}
 .project .shot:hover img{transform:scale(1.02)}
-.project .body{padding:32px}
+.project .body{padding:28px 28px 30px;min-width:0}
 .meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:10px}
 .meta .year{font-weight:600;color:var(--ink)}
 .meta .dot{width:3px;height:3px;border-radius:50%;background:var(--faint)}
-h3{font-size:24px;line-height:1.25;letter-spacing:-.015em;margin-bottom:18px}
-.case{display:grid;gap:12px;margin-bottom:22px}
-.case div{font-size:15px}
+h3{font-size:22px;line-height:1.25;letter-spacing:-.015em;margin-bottom:18px}
+.case{display:grid;gap:10px;margin-bottom:20px}
+.case div{font-size:14.5px;line-height:1.55}
 .case b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:2px}
 .facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-bottom:24px}
 .facts li{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
@@ -135,9 +135,9 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
         <div class="meta"><span class="year">2026</span><span class="dot"></span><span>End-to-end BI project · public Steam data</span></div>
         <h3>CD PROJEKT Back-Catalogue Health Hub</h3>
         <div class="case">
-          <div><b>Question</b>How alive are The Witcher 3 and Cyberpunk 2077 between major releases, and which events move player interest and sentiment?</div>
-          <div><b>How</b>Automated collection with GitHub Actions, a tested PostgreSQL + dbt warehouse, and a Power BI model with a calculation group, row- and object-level security, checked by Best Practice Analyzer on every pull request.</div>
-          <div><b>Result</b>Technical overhauls cost up to −17.6 pp of Steam score; content updates raise activity by up to +457% without hurting it.</div>
+          <div><b>Question</b>Which events move player interest and sentiment for The Witcher 3 and Cyberpunk 2077?</div>
+          <div><b>How</b>GitHub Actions → PostgreSQL + dbt → Power BI model with RLS, a calculation group and BPA checks in CI.</div>
+          <div><b>Result</b>Technical overhauls cost up to −17.6 pp of Steam score; content updates lift activity up to +457%.</div>
         </div>
         <ul class="facts"><li>4.9M reviews</li><li>125 data tests</li><li>51 events vs control group</li><li>RLS + OLS</li></ul>
         <div class="links">
@@ -157,8 +157,8 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
         <h3>Financial Performance (P&amp;L)</h3>
         <div class="case">
           <div><b>Question</b>Where does a consumer-goods business beat or miss its budget, and why?</div>
-          <div><b>How</b>Star schema with an explicit measure layer, one favourable/unfavourable sign convention, a full P&amp;L statement and commentary generated in DAX from the current filters.</div>
-          <div><b>Result</b>Revenue is 2.2% under budget, driven by Consumer Beauty (−11.9%) and a COGS ratio 6.2 pp above plan; Asia Pacific is the only region ahead.</div>
+          <div><b>How</b>Star schema, one favourable/unfavourable sign convention, a full P&amp;L statement and commentary generated in DAX.</div>
+          <div><b>Result</b>Revenue 2.2% under budget, driven by Consumer Beauty (−11.9%) and a COGS ratio 6.2 pp above plan.</div>
         </div>
         <ul class="facts"><li>Budget vs actual</li><li>P&amp;L statement</li><li>Dynamic commentary</li><li>Colour-blind-safe</li></ul>
         <div class="links">
@@ -178,8 +178,8 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
         <h3>HR Overview Dashboard</h3>
         <div class="case">
           <div><b>Question</b>Who works here, what do they earn, and how many leave each year?</div>
-          <div><b>How</b>Four pages with a custom navigation rail, turnover, retention and attrition measures over a proper date table, and a single-employee profile view.</div>
-          <div><b>Result</b>About 6.5% annual turnover over the last three years; 62 documented measures and a model taken from 270 to 20 Best Practice findings.</div>
+          <div><b>How</b>Four pages with custom navigation, turnover and retention measures on a proper date table, and an employee profile view.</div>
+          <div><b>Result</b>About 6.5% annual turnover in the last three years; model cleaned from 270 to 20 Best Practice findings.</div>
         </div>
         <ul class="facts"><li>Turnover · retention · attrition</li><li>62 measures</li><li>Field parameters</li></ul>
         <div class="links">
