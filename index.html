@@ -1,224 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/main.css">
-        <title>Iryna CV</title>
-    </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iryna Petruk · Data Analyst</title>
+<meta name="description" content="Iryna Petruk, Data Analyst working in Power BI: end-to-end reports from data collection and SQL to the semantic model.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAFAF8; --card:#FFFFFF; --ink:#1F2328; --muted:#5F6368; --faint:#9AA0A6;
+  --line:#E6E6E3; --accent:#1F3A5F; --accent-soft:#E9EEF4; --amber:#A87400;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* top bar */
+.top{position:sticky;top:0;z-index:5;background:rgba(250,250,248,.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{font-weight:600;text-decoration:none;letter-spacing:-.01em}
+.nav{display:flex;gap:28px;list-style:none;font-size:15px}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.eyebrow{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--amber);margin-bottom:16px}
+h1{font-size:48px;line-height:1.1;letter-spacing:-.025em;font-weight:700;margin-bottom:20px}
+.lead{font-size:19px;color:var(--muted);max-width:600px;margin-bottom:32px}
+.lead strong{color:var(--ink);font-weight:600}
+.photo{width:168px;height:168px;border-radius:50%;object-fit:cover;border:4px solid var(--card);box-shadow:0 0 0 1px var(--line)}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:8px;font-size:15px;font-weight:500;text-decoration:none;border:1px solid var(--line);background:var(--card);transition:border-color .2s,background .2s}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{background:#16304F}
+.btn svg{width:16px;height:16px;flex:none}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:32px}
+
+/* project cards */
+.project{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px;display:grid;grid-template-columns:1.1fr 1fr}
+.project .shot{display:block;background:#F1F1EE;border-right:1px solid var(--line);overflow:hidden}
+.project .shot img{width:100%;height:100%;min-height:320px;object-fit:cover;object-position:left top;display:block;transition:transform .4s}
+.project .shot:hover img{transform:scale(1.02)}
+.project .body{padding:32px}
+.meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:10px}
+.meta .year{font-weight:600;color:var(--ink)}
+.meta .dot{width:3px;height:3px;border-radius:50%;background:var(--faint)}
+h3{font-size:24px;line-height:1.25;letter-spacing:-.015em;margin-bottom:18px}
+.case{display:grid;gap:12px;margin-bottom:22px}
+.case div{font-size:15px}
+.case b{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:2px}
+.facts{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin-bottom:24px}
+.facts li{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links .btn{padding:9px 16px;font-size:14px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.skill h4{font-size:16px;margin-bottom:12px}
+.skill ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.skill li{font-size:13px;padding:3px 9px;border-radius:6px;border:1px solid var(--line);color:var(--muted)}
+
+/* contact */
+.contact{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.contact p{font-size:20px;font-weight:600;letter-spacing:-.01em;max-width:520px}
+footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
+
+@media (max-width:860px){
+  .project{grid-template-columns:1fr}
+  .project .shot{border-right:0;border-bottom:1px solid var(--line)}
+  .project .shot img{min-height:0;aspect-ratio:16/9}
+  .skills{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .nav{display:none}
+  .hero{grid-template-columns:1fr;padding:48px 0 48px;gap:24px}
+  .photo{width:112px;height:112px;order:-1}
+  h1{font-size:36px}
+  .lead{font-size:17px}
+  .project .body{padding:24px}
+  h3{font-size:21px}
+}
+</style>
+</head>
 <body>
 
-    <div class="wrapper">
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Iryna Petruk</a>
+    <ul class="nav">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
 
-        <!-- header -->
-        <header class="header">
-           <div class="container">
-               <nav class="menu">
-                   <ul class="menu__inner">
-                       <li class="menu__items">
-                           <a href="#about" class="menu_text">About</a>
-                       </li>
-        
-                       <li class="menu__items">
-                           <a href="#skills" class="menu_text">Skills</a>
-                       </li>
-        
-                       <li class="menu__items">
-                           <a href="#projects" class="menu_text">Projects</a>
-                       </li>
-        
-                       <li class="menu__items">
-                           <a href="#social" class="menu_text">Social</a>
-                       </li>
-                   </ul>
-               </nav>
-           </div>
-        </header>
+<main class="wrap">
 
-        <!-- Main Scrin  -->
-        <section class="main">
-            <div class="container">
-                <div class="main-name">
-                    <h2 class="caption">Hi, I am Iryna, <span>Data Analyst</span> · Power BI</h2>
-                    
-                    <!-- button  -->
-                    <a href="resume/Iryna_Petruk_CV_PBI.pdf" download="Iryna_Petruk_CV_PBI.pdf">
-                        <button class="button">Download Resume</button> 
-                    </a>
-                </div>
-
-                <img class="my_photo" src="img/me.jpeg" alt="i am">             
-            </div>
-        </section>
-
-        <!-- About  -->
-        <section id="about" class="about">
-            <div class="container">
-                <h2 class="sub_caption">About</h2>
-                <p class="caption_box">attentive - executive - easily trained</p>
-                <p class="text18">I am excited about the opportunity to bring my analytical skills and passion for data and contribute to the company's success.</p>
-                <p class="text18">I build Power BI reports end to end, from data collection and SQL to the semantic model, my pet-project can be viewed below in the <a href="#projects">Projects section</a>.</p>
-            </div>
-        </section>
-
-        <!-- Skills  -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <h2 class="sub_caption">Skills</h2>
-                <ul class="skills-item">
-                    <li>
-                        <p class="caption_box">Power BI: data modelling, DAX, calculation groups, row- and object-level security, PBIP/TMDL in Git, Tabular Editor</p>
-                    </li>
-                    <li>
-                        <p class="caption_box">SQL (PostgreSQL), dbt</p>
-                    </li>
-                    <li>
-                        <p class="caption_box">Python (data collection, automation, NumPy)</p>
-                    </li>
-                    <li>
-                        <p class="caption_box">Git, GitHub Actions</p>
-                    </li>
-                    <li>
-                        <p class="caption_box">Excel (Pivot Table, Conditional Formatting, VLOOKUP)</p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="works">
-            <div class="container">
-                <h2 class="sub_caption">My Pet Projects</h2>
-                <div class="stores">
-                    <div class="clothings featured">
-                        <a class="web-img" href="https://app.powerbi.com/view?r=eyJrIjoiNTI5M2YzYTMtNDQ1ZS00MzZhLWJmYzQtYjg3ZDAyNjg4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener">
-                            <img src="img/cdpr_health_hub.jpg" alt="Overview page of the CD PROJEKT Back-Catalogue Health Hub report">
-                        </a>
-                        <div class="description">
-                            <h2 class="sub_caption">CD PROJEKT Back-Catalogue Health Hub</h2>
-                            <div class="description-name">
-                                <p class="year">2026</p>
-                                <p class="text18">End-to-end BI project</p>
-                            </div>
-                            <p class="text18">How alive are The Witcher 3 and Cyberpunk 2077 between major releases, and which events move player interest and sentiment? Built on public Steam data.</p>
-                            <ul class="project-points text16">
-                                <li>Automated collection of 4.9M reviews and hourly player counts with GitHub Actions; PostgreSQL + dbt warehouse with 125 data tests.</li>
-                                <li>Power BI semantic model: star schema, 34 documented DAX measures, a calculation group, dynamic row- and object-level security, Best Practice Analyzer checks on every pull request.</li>
-                                <li>Event study of 51 releases, patches, expansions and sales against a control group: technical overhauls cost up to −17.6 pp of Steam score, content updates raise activity by up to +457%.</li>
-                            </ul>
-                            <ul class="tags">
-                                <li>Power BI</li><li>DAX</li><li>PostgreSQL</li><li>dbt</li><li>Python</li><li>GitHub Actions</li>
-                            </ul>
-                            <div class="project-links">
-                                <a class="button" href="https://app.powerbi.com/view?r=eyJrIjoiNTI5M2YzYTMtNDQ1ZS00MzZhLWJmYzQtYjg3ZDAyNjg4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener">View live report</a>
-                                <a class="button-empty" href="https://github.com/Iryna-Petruk/steam-player-collector" target="_blank" rel="noopener">Code on GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="string"></div>
-
-                    <div class="clothings featured">
-                        <a class="web-img" target="_blank" rel="noopener" href="https://app.powerbi.com/view?r=eyJrIjoiNjc2M2I1NmUtYmJmZi00ZDg5LTlkN2QtNWJhZWFjZjRlNDRiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9">
-                            <img src="img/project title.png" alt="store-img">
-                        </a>
-                        <div class="description">
-                            <h2 class="sub_caption">HR Overview Dashboard</h2>
-                            <div class="description-name">
-                                <p class="year">2025</p>
-                                <p class="text18">Dashboard</p>
-                            </div>
-                            <p class="text18">Company overview for HR: headcount, average salary and age, broken down by department, gender, marital status and age group, with slicers to filter the whole page. Built with Power BI.</p>
-                            <ul class="tags">
-                                <li>Power BI</li><li>DAX</li>
-                            </ul>
-                            <div class="project-links">
-                                <a class="button" href="https://app.powerbi.com/view?r=eyJrIjoiNjc2M2I1NmUtYmJmZi00ZDg5LTlkN2QtNWJhZWFjZjRlNDRiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener">View live report</a>
-                                <a class="button-empty" href="https://github.com/Iryna-Petruk/hr-overview-dashboard" target="_blank" rel="noopener" data-goatcounter-click="hr-github">Code on GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="string"></div>
-<!--
-                    <div class="clothings">
-                        <a class="web-img" href="https://iryna-petruk.github.io/sup/">
-                            <img src="img/sup.png" alt="store-img">
-                        </a>
-                        <div class="description">
-                            <h2 class="sub_caption">Sup Store</h2>
-                            <div class="description-name">
-                                <p class="year">2022</p>
-                                <p class="text18">Internet shop</p>
-                            </div>
-                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
-                        </div>
-                    </div>
-
-                    <div class="string"></div>
-
-                    <div class="clothings">
-                        <a class="web-img" href="https://iryna-petruk.github.io/xiaomi/">
-                            <img src="img/xiaomi.png" alt="store-img">
-                        </a>
-                        <div class="description">
-                            <h2 class="sub_caption">Bike Store</h2>
-                            <div class="description-name">
-                                <p class="year">2022</p>
-                                <p class="text18">Internet shop</p>
-                            </div>
-                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
-                        </div>
-                    </div>
-
-                    <div class="string"></div>
-
-                    <div class="clothings">
-                        <a class="web-img" href="https://iryna-petruk.github.io/realestate/">
-                            <img src="img/real.png" alt="store-img">
-                        </a>
-                        <div class="description">
-                            <h2 class="sub_caption">Info Page</h2>
-                            <div class="description-name">
-                                <p class="year">2022</p>
-                                <p class="text18">Website</p>
-                            </div>
-                            <p class="text18">This project was created with HTML5, CSS, JAVA SCRIPT</p>
-                        </div>
-                    </div>
--->
-                </div>
-            </div>
-        </section>
-
-        <!-- footer  -->
-        <footer id="social" class="footer">
-           <div class="container">
-                <ul class="social">
-                    <li>
-                        <a href="mailto:blog.irynka@gmail.com">
-                            <img src="img/gmail.png" alt="mail">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://telegram.me/iryna_petruk">
-                            <img src="img/telegram.png" alt="">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Iryna-Petruk" target="_blank" rel="noopener" aria-label="GitHub">
-                            <svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path fill="#21243D" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-                        </a>
-                    </li>
-                </ul>
-           </div>
-        </footer>
-    
+  <div class="hero">
+    <div>
+      <p class="eyebrow">Data Analyst · Power BI</p>
+      <h1>I turn raw data into reports people can trust.</h1>
+      <p class="lead">I build Power BI reports <strong>end to end</strong>: collecting the data, modelling it in SQL and dbt, and designing a semantic model and report that answer a real business question.</p>
+      <div class="btns">
+        <a class="btn primary" href="resume/Iryna_Petruk_CV_PBI.pdf" download data-goatcounter-click="resume-download">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 2v8m0 0L5 7m3 3 3-3M3 13h10"/></svg>Download CV</a>
+        <a class="btn" href="https://github.com/Iryna-Petruk" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.49c-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/iryna-petruk/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" fill="currentColor"><path d="M0 1.15C0 .52.52 0 1.17 0h13.66C15.48 0 16 .52 16 1.15v13.7c0 .63-.52 1.15-1.17 1.15H1.17C.52 16 0 15.48 0 14.85zm4.94 12.24V6.17H2.54v7.22zM3.74 5.18c.84 0 1.36-.55 1.36-1.25-.02-.71-.52-1.25-1.34-1.25S2.4 3.22 2.4 3.93c0 .7.52 1.25 1.33 1.25zm4.91 8.21V9.36c0-.22.02-.43.08-.58.17-.43.57-.88 1.23-.88.87 0 1.21.66 1.21 1.63v3.86h2.4V9.25c0-2.22-1.18-3.25-2.76-3.25-1.27 0-1.84.7-2.16 1.19v.02h-.02l.02-.02V6.17h-2.4c.03.68 0 7.22 0 7.22z"/></svg>LinkedIn</a>
+      </div>
     </div>
+    <img class="photo" src="img/me.jpeg" alt="Iryna Petruk">
+  </div>
 
-    <script src="js/main.js"></script>
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <article class="project">
+      <a class="shot" href="https://app.powerbi.com/view?r=eyJrIjoiNTI5M2YzYTMtNDQ1ZS00MzZhLWJmYzQtYjg3ZDAyNjg4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="cdpr-live-report">
+        <img src="img/cdpr_health_hub.jpg" alt="Overview page of the CD PROJEKT Back-Catalogue Health Hub report">
+      </a>
+      <div class="body">
+        <div class="meta"><span class="year">2026</span><span class="dot"></span><span>End-to-end BI project · public Steam data</span></div>
+        <h3>CD PROJEKT Back-Catalogue Health Hub</h3>
+        <div class="case">
+          <div><b>Question</b>How alive are The Witcher 3 and Cyberpunk 2077 between major releases, and which events move player interest and sentiment?</div>
+          <div><b>How</b>Automated collection with GitHub Actions, a tested PostgreSQL + dbt warehouse, and a Power BI model with a calculation group, row- and object-level security, checked by Best Practice Analyzer on every pull request.</div>
+          <div><b>Result</b>Technical overhauls cost up to −17.6 pp of Steam score; content updates raise activity by up to +457% without hurting it.</div>
+        </div>
+        <ul class="facts"><li>4.9M reviews</li><li>125 data tests</li><li>51 events vs control group</li><li>RLS + OLS</li></ul>
+        <div class="links">
+          <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiNTI5M2YzYTMtNDQ1ZS00MzZhLWJmYzQtYjg3ZDAyNjg4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="cdpr-live-report">View live report</a>
+          <a class="btn" href="https://github.com/Iryna-Petruk/steam-player-collector" target="_blank" rel="noopener" data-goatcounter-click="cdpr-github">Code on GitHub</a>
+        </div>
+      </div>
+    </article>
+
+    <!-- P&L project: hidden until the report is republished and on GitHub
+    <article class="project">
+      <a class="shot" href="#" target="_blank" rel="noopener" data-goatcounter-click="pnl-live-report">
+        <img src="img/pnl_dashboard.jpg" alt="Revenue page of the Financial Performance P&amp;L dashboard">
+      </a>
+      <div class="body">
+        <div class="meta"><span class="year">2026</span><span class="dot"></span><span>Finance · synthetic data</span></div>
+        <h3>Financial Performance (P&amp;L)</h3>
+        <div class="case">
+          <div><b>Question</b>Where does a consumer-goods business beat or miss its budget, and why?</div>
+          <div><b>How</b>Star schema with an explicit measure layer, one favourable/unfavourable sign convention, a full P&amp;L statement and commentary generated in DAX from the current filters.</div>
+          <div><b>Result</b>Revenue is 2.2% under budget, driven by Consumer Beauty (−11.9%) and a COGS ratio 6.2 pp above plan; Asia Pacific is the only region ahead.</div>
+        </div>
+        <ul class="facts"><li>Budget vs actual</li><li>P&amp;L statement</li><li>Dynamic commentary</li><li>Colour-blind-safe</li></ul>
+        <div class="links">
+          <a class="btn primary" href="#" target="_blank" rel="noopener" data-goatcounter-click="pnl-live-report">View live report</a>
+          <a class="btn" href="#" target="_blank" rel="noopener" data-goatcounter-click="pnl-github">Code on GitHub</a>
+        </div>
+      </div>
+    </article>
+    -->
+
+    <article class="project">
+      <a class="shot" href="https://app.powerbi.com/view?r=eyJrIjoiNjc2M2I1NmUtYmJmZi00ZDg5LTlkN2QtNWJhZWFjZjRlNDRiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="hr-live-report">
+        <img src="img/hr_dashboard.jpg" alt="Overview page of the HR Overview Dashboard">
+      </a>
+      <div class="body">
+        <div class="meta"><span class="year">2025</span><span class="dot"></span><span>HR analytics · fictional training data</span></div>
+        <h3>HR Overview Dashboard</h3>
+        <div class="case">
+          <div><b>Question</b>Who works here, what do they earn, and how many leave each year?</div>
+          <div><b>How</b>Four pages with a custom navigation rail, turnover, retention and attrition measures over a proper date table, and a single-employee profile view.</div>
+          <div><b>Result</b>About 6.5% annual turnover over the last three years; 62 documented measures and a model taken from 270 to 20 Best Practice findings.</div>
+        </div>
+        <ul class="facts"><li>Turnover · retention · attrition</li><li>62 measures</li><li>Field parameters</li></ul>
+        <div class="links">
+          <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiNjc2M2I1NmUtYmJmZi00ZDg5LTlkN2QtNWJhZWFjZjRlNDRiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="hr-live-report">View live report</a>
+          <a class="btn" href="https://github.com/Iryna-Petruk/hr-overview-dashboard" target="_blank" rel="noopener" data-goatcounter-click="hr-github">Code on GitHub</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><h4>Power BI</h4><ul><li>Data modelling</li><li>DAX</li><li>Calculation groups</li><li>RLS / OLS</li><li>PBIP / TMDL</li><li>Tabular Editor</li><li>Report design</li></ul></div>
+      <div class="skill"><h4>Data</h4><ul><li>SQL (PostgreSQL)</li><li>dbt</li><li>Power Query</li><li>Python</li><li>Excel</li></ul></div>
+      <div class="skill"><h4>Ways of working</h4><ul><li>Git &amp; pull requests</li><li>GitHub Actions</li><li>Data quality tests</li><li>Documentation</li></ul></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="contact">
+      <p>Open to Power BI and data analyst roles. Happy to walk you through any of these projects.</p>
+      <div class="btns">
+        <a class="btn primary" href="mailto:blog.irynka@gmail.com">Email me</a>
+        <a class="btn" href="https://telegram.me/iryna_petruk" target="_blank" rel="noopener">Telegram</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer><div class="wrap">© 2026 Iryna Petruk · Project data is public or synthetic; no company assets are used.</div></footer>
 
 </body>
 </html>
