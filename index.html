@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Iryna Petruk · Data Analyst</title>
 <meta name="description" content="Iryna Petruk, Data Analyst working in Power BI: end-to-end reports from data collection and SQL to the semantic model.">
+<link rel="canonical" href="https://iryna-petruk.github.io/cv/">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Iryna Petruk">
+<meta property="og:title" content="Iryna Petruk · Data Analyst · Power BI">
+<meta property="og:description" content="Iryna Petruk, Data Analyst working in Power BI: end-to-end reports from data collection and SQL to the semantic model.">
+<meta property="og:url" content="https://iryna-petruk.github.io/cv/">
+<meta property="og:image" content="https://iryna-petruk.github.io/cv/img/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Iryna Petruk · Data Analyst · Power BI">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Iryna Petruk · Data Analyst · Power BI">
+<meta name="twitter:description" content="Iryna Petruk, Data Analyst working in Power BI: end-to-end reports from data collection and SQL to the semantic model.">
+<meta name="twitter:image" content="https://iryna-petruk.github.io/cv/img/og-preview.png">
+<meta name="twitter:image:alt" content="Iryna Petruk · Data Analyst · Power BI">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -47,8 +65,8 @@ h2{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
 
 /* project cards */
 .project{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:28px;display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr)}
-.project .shot{display:block;background:#F1F1EE;border-right:1px solid var(--line);overflow:hidden}
-.project .shot img{width:100%;height:100%;min-height:320px;object-fit:cover;object-position:left top;display:block;transition:transform .4s}
+.project .shot{display:flex;align-items:center;justify-content:center;background:#F1F1EE;border-right:1px solid var(--line);padding:18px;overflow:hidden}
+.project .shot img{width:100%;height:auto;aspect-ratio:960/550;object-fit:contain;display:block;border-radius:6px;box-shadow:0 1px 4px rgba(31,35,40,.14);transition:transform .4s}
 .project .shot:hover img{transform:scale(1.02)}
 .project .body{padding:28px 28px 30px;min-width:0}
 .meta{display:flex;gap:10px;align-items:center;font-size:13px;color:var(--muted);margin-bottom:10px}
@@ -78,7 +96,6 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
 @media (max-width:860px){
   .project{grid-template-columns:1fr}
   .project .shot{border-right:0;border-bottom:1px solid var(--line)}
-  .project .shot img{min-height:0;aspect-ratio:16/9}
   .skills{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -210,6 +227,8 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
 </main>
 
 <footer><div class="wrap">© 2026 Iryna Petruk · Project data is public or synthetic; no company assets are used.</div></footer>
+
+<script data-goatcounter="https://irynap.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 </body>
 </html>
