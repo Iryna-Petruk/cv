@@ -107,6 +107,18 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
   .project .body{padding:24px}
   h3{font-size:21px}
 }
+/* stacked project cards: full-width screenshot on top, case study below */
+.project{display:block}
+.project .shot{border-right:0;border-bottom:1px solid var(--line);padding:24px 24px 0;align-items:flex-end}
+.project .shot img{border-radius:8px 8px 0 0;box-shadow:0 -1px 6px rgba(31,35,40,.10)}
+.project .shot:hover img{transform:none}
+.project .body{padding:26px 32px 30px}
+.project h3{margin-bottom:16px}
+.case{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:22px}
+.project .foot{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px}
+.project .foot .facts{margin-bottom:0}
+@media (max-width:860px){.case{grid-template-columns:1fr;gap:10px}.project .body{padding:24px}}
+@media (max-width:640px){.project .shot{padding:14px 14px 0}}
 </style>
 </head>
 <body>
@@ -156,10 +168,12 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
           <div><b>How</b>GitHub Actions → PostgreSQL + dbt → Power BI model with RLS, a calculation group and BPA checks in CI.</div>
           <div><b>Result</b>Technical overhauls cost up to −17.6 pp of Steam score; content updates lift activity up to +457%.</div>
         </div>
-        <ul class="facts"><li>4.9M reviews</li><li>125 data tests</li><li>51 events vs control group</li><li>RLS + OLS</li></ul>
-        <div class="links">
-          <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiNTI5M2YzYTMtNDQ1ZS00MzZhLWJmYzQtYjg3ZDAyNjg4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="cdpr-live-report">View live report</a>
-          <a class="btn" href="https://github.com/Iryna-Petruk/steam-player-collector" target="_blank" rel="noopener" data-goatcounter-click="cdpr-github">Code on GitHub</a>
+        <div class="foot">
+          <ul class="facts"><li>4.9M reviews</li><li>125 data tests</li><li>51 events vs control group</li><li>RLS + OLS</li></ul>
+          <div class="links">
+            <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiNTI5M2YzYTMtNDQ1ZS00MzZhLWJmYzQtYjg3ZDAyNjg4YjBkIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="cdpr-live-report">View live report</a>
+            <a class="btn" href="https://github.com/Iryna-Petruk/steam-player-collector" target="_blank" rel="noopener" data-goatcounter-click="cdpr-github">Code on GitHub</a>
+          </div>
         </div>
       </div>
     </article>
@@ -176,10 +190,12 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
           <div><b>How</b>Star schema, one favourable/unfavourable sign convention, a full P&amp;L statement and commentary generated in DAX.</div>
           <div><b>Result</b>Revenue 2.2% under budget, driven by Consumer Beauty (−11.9%) and a COGS ratio 6.2 pp above plan.</div>
         </div>
-        <ul class="facts"><li>Budget vs actual</li><li>P&amp;L statement</li><li>Dynamic commentary</li><li>Colour-blind-safe</li></ul>
-        <div class="links">
-          <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiZWRiZDQzMTUtMmMxMC00MmIyLTg4YWYtOGI0Mjk4ZDc5NzYxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="pnl-live-report">View live report</a>
-          <a class="btn" href="https://github.com/Iryna-Petruk/financial-performance-pnl" target="_blank" rel="noopener" data-goatcounter-click="pnl-github">Code on GitHub</a>
+        <div class="foot">
+          <ul class="facts"><li>Budget vs actual</li><li>P&amp;L statement</li><li>Dynamic commentary</li><li>Colour-blind-safe</li></ul>
+          <div class="links">
+            <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiZWRiZDQzMTUtMmMxMC00MmIyLTg4YWYtOGI0Mjk4ZDc5NzYxIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="pnl-live-report">View live report</a>
+            <a class="btn" href="https://github.com/Iryna-Petruk/financial-performance-pnl" target="_blank" rel="noopener" data-goatcounter-click="pnl-github">Code on GitHub</a>
+          </div>
         </div>
       </div>
     </article>
@@ -196,10 +212,12 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--faint)}
           <div><b>How</b>Four pages with custom navigation, turnover and retention measures on a proper date table, and an employee profile view.</div>
           <div><b>Result</b>About 6.5% annual turnover in the last three years; model cleaned from 270 to 20 Best Practice findings.</div>
         </div>
-        <ul class="facts"><li>Turnover · retention · attrition</li><li>62 measures</li><li>Field parameters</li></ul>
-        <div class="links">
-          <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiNjc2M2I1NmUtYmJmZi00ZDg5LTlkN2QtNWJhZWFjZjRlNDRiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="hr-live-report">View live report</a>
-          <a class="btn" href="https://github.com/Iryna-Petruk/hr-overview-dashboard" target="_blank" rel="noopener" data-goatcounter-click="hr-github">Code on GitHub</a>
+        <div class="foot">
+          <ul class="facts"><li>Turnover · retention · attrition</li><li>62 measures</li><li>Field parameters</li></ul>
+          <div class="links">
+            <a class="btn primary" href="https://app.powerbi.com/view?r=eyJrIjoiNjc2M2I1NmUtYmJmZi00ZDg5LTlkN2QtNWJhZWFjZjRlNDRiIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" rel="noopener" data-goatcounter-click="hr-live-report">View live report</a>
+            <a class="btn" href="https://github.com/Iryna-Petruk/hr-overview-dashboard" target="_blank" rel="noopener" data-goatcounter-click="hr-github">Code on GitHub</a>
+          </div>
         </div>
       </div>
     </article>
